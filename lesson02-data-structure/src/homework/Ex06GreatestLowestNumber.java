@@ -20,62 +20,58 @@ public class Ex06GreatestLowestNumber {
 		Scanner sc = new Scanner(System.in);
 
 		// Check validation for the input (a, b, c)
-		String input = "";
+		String inputA = "";
 		do {
 			System.out.print("Enter a: ");
 
-			input = sc.nextLine();
-			if (checkValidNumber(input) && range(input)) {
+			inputA = sc.nextLine();
+			if (checkValidNumber(inputA) && range(inputA)) {
 				break;
 			}
 		} while (true);
 
+		String inputB = "";
 		do {
 			System.out.print("Enter b: ");
 
-			input = sc.nextLine();
-			if (checkValidNumber(input) && range(input)) {
+			inputB = sc.nextLine();
+			if (checkValidNumber(inputB) && range(inputB)) {
 				break;
 			}
 		} while (true);
 
+		String inputC = "";
 		do {
 			System.out.print("Enter c: ");
 
-			input = sc.nextLine();
-			if (checkValidNumber(input) && range(input)) {
+			inputC = sc.nextLine();
+			if (checkValidNumber(inputC) && range(inputC)) {
 				break;
 			}
 		} while (true);
 
 		// Find out the greatest and lowest number
-		int a = Integer.parseInt(input);
-		int b = Integer.parseInt(input);
-		int c = Integer.parseInt(input);
+		int a = Integer.parseInt(inputA);
+		int b = Integer.parseInt(inputB);
+		int c = Integer.parseInt(inputC);
 
 		// Max value
-		int max = a;
-
-		if (b > max) {
-			b = max;
-		}
-		if (c > max) {
-			c = max;
-		}
-
-		System.out.println("The greatest of the three numbers is: " + max);
-
-		// Min value
-		int min = a;
-
-		if (b < min) {
-			b = min;
-		}
-		if (c < min) {
-			c = min;
+		if (a >= b && a >= c) {
+			System.out.println(a + " is the greatest number");
+		} else if (b >= c && b >= a) {
+			System.out.println(b + " is the greatest number");
+		} else {
+			System.out.println(c + " is the greatest number");
 		}
 
-		System.out.println("The lowest of the three numbers is: " + min);
+		// Minimum value
+		if (a <= b && a <= c) {
+			System.out.println(a + " is the lowest number");
+		} else if (b <= c && b <= a) {
+			System.out.println(b + " is the lowest number");
+		} else {
+			System.out.println(c + " is the lowest number");
+		}
 
 	}
 
