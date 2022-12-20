@@ -20,7 +20,7 @@ public class Ex01CalAgeValidateWithCharAt {
 
 		String yobAsString = null;
 
-		// Lần đầu kh�?i kiểm tra, cho nhập year of birth
+		// Lần đầu không kiểm tra, cho nhập year of birth
 		// Nếu yobAsString ko phải số => quay lại dòng 27, tiếp tục nhập lại
 		do {
 			System.out.print("Enter year of birth (valid number): ");

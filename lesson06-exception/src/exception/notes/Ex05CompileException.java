@@ -4,10 +4,10 @@ package exception.notes;
  * Compile exception >> checkedException >> "try-catch" is required
  * Tại sao bắt buộc try-catch?
  * >> Những exception liên quan đến xử lý file, input, output
- *    Chẳng hạn như đ�?c một file, mà file đó không tồn tại thì làm sao mà đ�?c file đó được.
- *    �?ể an toàn => bắt buộc xử lý exception trước khi đ�?c file 
+ *    Chẳng hạn như đọc một file, mà file đó không tồn tại thì làm sao mà đọc file đó được.
+ *    Để an toàn => bắt buộc xử lý exception trước khi đọc file 
  *    
- * Khi không có path cụ thể => File sẽ được đặt ở "relative project path" (đư�?ng dẫn dự án tương đối)
+ * Khi không có path cụ thể => File sẽ được đặt ở "relative project path" (đường dẫn dự án tương đối)
  * Cụ thể trong lesson06-exception
    File file = new File("readme.md"); // khai báo, khởi tạo đối tượng
  */

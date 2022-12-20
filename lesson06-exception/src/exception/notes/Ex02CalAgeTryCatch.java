@@ -6,12 +6,12 @@ import java.util.Scanner;
 /**
  * Enter year of birth => calculate current age
  * Opt 2: Try-catch
- * + �?ặt đoạn mã có khả năng xảy ra ngoại lệ trong khối Try
+ * + Đặt đoạn mã có khả năng xảy ra ngoại lệ trong khối Try
  *   Hoặc đặt toàn bộ đoạn mã mình muốn vào, dòng nào bị lỗi ở Try sẽ nhảy vào Catch
- *   Cơ chế: vẫn chạy bình thư�?ng, ai lỗi thì nhảy vào Catch
+ *   Cơ chế: vẫn chạy bình thường, ai lỗi thì nhảy vào Catch
  *   (Không phải kiểu kiểm tra từng dòng xem có bị exception ko)
  * + Thông báo hoặc xử lý exception ở Catch 
- * + Sau đó sẽ trở v�? chương trình, tiếp tục bình thư�?ng
+ * + Sau đó sẽ trở về chương trình, tiếp tục bình thường
  */
 
 public class Ex02CalAgeTryCatch {
@@ -30,7 +30,7 @@ public class Ex02CalAgeTryCatch {
 			int cry = Year.now().getValue();
 			System.out.println("Age: " + (cry - yob));
 		} catch (NumberFormatException e) {
-			e.printStackTrace(); // JVM tự động g�?i để in ra lỗi
+			e.printStackTrace(); // JVM tự động gọi để in ra lỗi
 		}
 		
 		System.out.println("Back to Main method");
