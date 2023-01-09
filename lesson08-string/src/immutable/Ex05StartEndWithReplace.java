@@ -15,12 +15,15 @@ package immutable;
  *  +     : 1 or N character(s)
  *  {1,} : 1 or N character(s)
  *  {a, b}: from a to b character 
- * 4. Tạo chuỗi con s4 từ chuỗi s bắt đầu từ vị trí số 2
+ * 4. Tạo chuỗi con s4 từ chuỗi s bắt đầu từ vị trí số 4
+ * --> substring(): cắt chuỗi
+ * 5. Xác định chuỗi s2 có tồn tại trong chuỗi s1 hay không
+ * --> contains()
  */
 
 public class Ex05StartEndWithReplace {
 	public static void main(String[] args) {
-		String s = "STK123";
+		String s = "STK123STK";
 		String s1 = "STK";
 		String s2 = "SGK";
 		String s3 = "    Welcome     to     our class   ";
@@ -38,6 +41,17 @@ public class Ex05StartEndWithReplace {
 		// replace 1 or N spaces by space
 		System.out.println("Remove extra space: " + s3.trim().replaceAll("[\\s]+", " "));
 		
+		// 4
+		String s4 = s.substring(4);
+		System.out.println("s4 substring: " + s4); // 23STK
+		
+		String s5 = s.substring(0, 5);
+		System.out.println("s5 substring first five characters: " + s5); // STK12
+		
+		// 5
+		System.out.println("s contains s1 ? --> " + s.contains(s1));
+		System.out.println("s contains s1 ? --> " + s.contains(s2));
+
 	}
 
 }
